@@ -2,7 +2,7 @@
     "use strict";
 
     // Spinner
-    var spinner = function () {
+    const spinner = function () {
         setTimeout(function () {
             if ($('#spinner').length > 0) {
                 $('#spinner').removeClass('show');
@@ -86,7 +86,7 @@
 
 
     // Portfolio isotope and filter
-    var portfolioIsotope = $('.portfolio-container').isotope({
+    const portfolioIsotope = $('.portfolio-container').isotope({
         itemSelector: '.portfolio-item',
         layoutMode: 'fitRows'
     });
@@ -96,6 +96,6 @@
 
         portfolioIsotope.isotope({filter: $(this).data('filter')});
     });
-    
+
 })(jQuery);
 

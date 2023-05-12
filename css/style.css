@@ -1,7 +1,6 @@
-/********** Template CSS **********/
 :root {
-    --primary: #AB7442;
-    --light: #F5F5F5;
+    --primary: #e6d62d !important;
+
     --dark: #353535;
 }
 
@@ -30,14 +29,18 @@
 #spinner {
     opacity: 0;
     visibility: hidden;
-    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    transition: opacity .9s ease-out, visibility 0s linear .9s;
     z-index: 99999;
+    background: black;
+    height: 100vh;
+    width: 100%;
 }
 
 #spinner.show {
     transition: opacity .5s ease-out, visibility 0s linear 0s;
     visibility: visible;
     opacity: 1;
+
 }
 
 
@@ -45,11 +48,14 @@
 .btn {
     font-weight: 500;
     transition: .5s;
+
 }
 
 .btn.btn-primary,
 .btn.btn-secondary {
-    color: #FFFFFF;
+    color: black;
+    background: #d8de1b;
+
 }
 
 .btn-square {
@@ -81,7 +87,7 @@
 .navbar .dropdown-toggle::after {
     border: none;
     content: "\f107";
-    font-family: "Font Awesome 5 Free";
+    font-family: "Font Awesome 5 Free", sans-serif;
     font-weight: 900;
     vertical-align: middle;
     margin-left: 8px;
@@ -90,7 +96,6 @@
 .navbar-light .navbar-nav .nav-link {
     margin-right: 30px;
     padding: 25px 0;
-    color: #FFFFFF;
     font-size: 15px;
     font-weight: 500;
     text-transform: uppercase;
@@ -116,6 +121,8 @@
 .navbar-light .navbar-brand,
 .navbar-light a.btn {
     height: 75px;
+    border-color: transparent !important;
+    border-radius: 25px 25px 25px 25px;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -272,6 +279,7 @@
     height: 5px;
     bottom: 0;
     background: var(--dark);
+    display: none;
 }
 
 .section-title h1::before {
@@ -354,6 +362,7 @@
     transition: .5s;
     border-bottom: 2px solid transparent;
 }
+
 
 #portfolio-flters li:hover,
 #portfolio-flters li.active {
@@ -580,6 +589,7 @@
 
 .footer .btn.btn-social:hover {
     color: var(--primary);
+    scale: 1.05;
 }
 
 .footer .btn.btn-link {
@@ -597,13 +607,13 @@
 .footer .btn.btn-link::before {
     position: relative;
     content: "\f105";
-    font-family: "Font Awesome 5 Free";
+    font-family: "Font Awesome 5 Free", sans-serif;
     font-weight: 900;
     margin-right: 10px;
 }
 
 .footer .btn.btn-link:hover {
-    color: var(--primary);
+    color: #0d6efd !important;
     letter-spacing: 1px;
     box-shadow: none;
 }
